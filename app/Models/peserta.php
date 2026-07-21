@@ -9,6 +9,10 @@ class peserta extends Model
 {
     use HasFactory;
 
+    protected $table = 'peserta';
+
+    protected $primarykey = 'id';
+
     protected $fillable = [
         'nama',
         'jenis_kelamin',
@@ -20,6 +24,6 @@ class peserta extends Model
 
     public function surat()
     {
-        return $this->belongsTo(surat::class);
+        return $this->belongsTo(surat::class, 'id_surat', 'id');
     }
 }

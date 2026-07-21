@@ -9,6 +9,10 @@ class surat extends Model
 {
     use HasFactory;
 
+    protected $table = 'surat';
+
+    protected $primarykey = 'id';
+
     protected $fillable = [
         'nama_surat',
         'nomor_surat',
@@ -17,6 +21,6 @@ class surat extends Model
 
     public function peserta()
     {
-        return $this->belongsTo(peserta::class);
+        return $this->belongsTo(peserta::class, 'id', 'id_surat');
     }
 }
