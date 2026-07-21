@@ -24,6 +24,6 @@ class peserta extends Model
 
     public function surat()
     {
-        return $this->belongsTo(surat::class, 'id_surat', 'id');
+        return $this->hasMany(surat::class);
     }
 }

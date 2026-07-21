@@ -21,6 +21,6 @@ class surat extends Model
 
     public function peserta()
     {
-        return $this->belongsTo(peserta::class, 'id', 'id_surat');
+        return $this->belongsTo(peserta::class, 'id_surat');
     }
 }
