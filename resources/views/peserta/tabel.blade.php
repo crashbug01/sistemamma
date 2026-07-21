@@ -23,7 +23,7 @@
                     <!--begin::Row-->
                     <div class="row">
                         <div class="col-sm-6">
-                            <h3 class="mb-0">Tabel Peserta</h3>
+                            <h3 class="mb-0">Tabel Surat</h3>
                         </div>
 
                     </div>
@@ -43,53 +43,27 @@
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th style="width: 10px">#</th>
-                                    <th>Task</th>
-                                    <th>Progress</th>
-                                    <th style="width: 40px">Label</th>
+                                    <th>ID</th>
+                                    <th>Nama</th>
+                                    <th>Jenis Kelamin</th>
+                                    <th>No Whatsapp</th>
+                                    <th>Surat</th>
+                                    <th>Jam Belajar</th>
+                                    <th>Status</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="align-middle">
-                                    <td>1.</td>
-                                    <td>Update software</td>
-                                    <td>
-                                        <div class="progress progress-xs">
-                                            <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
-                                        </div>
-                                    </td>
-                                    <td><span class="badge text-bg-danger">55%</span></td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td>2.</td>
-                                    <td>Clean database</td>
-                                    <td>
-                                        <div class="progress progress-xs">
-                                            <div class="progress-bar text-bg-warning" style="width: 70%"></div>
-                                        </div>
-                                    </td>
-                                    <td> <span class="badge text-bg-warning">70%</span> </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td>3.</td>
-                                    <td>Cron job running</td>
-                                    <td>
-                                        <div class="progress progress-xs progress-striped active">
-                                            <div class="progress-bar text-bg-primary" style="width: 30%"></div>
-                                        </div>
-                                    </td>
-                                    <td> <span class="badge text-bg-primary">30%</span> </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td>4.</td>
-                                    <td>Fix and squish bugs</td>
-                                    <td>
-                                        <div class="progress progress-xs progress-striped active">
-                                            <div class="progress-bar text-bg-success" style="width: 90%"></div>
-                                        </div>
-                                    </td>
-                                    <td> <span class="badge text-bg-success">90%</span> </td>
-                                </tr>
+                                @foreach ($peserta as $peserta)
+                                    <tr>
+                                        <td>{{ $peserta->id }}</td>
+                                        <td>{{ $peserta->nama }}</td>
+                                        <td>{{ $peserta->jenis_kelamin }}</td>
+                                        <td>{{ $peserta->no_whatsapp }}</td>
+                                        <td>{{ $peserta->surat_id }}</td>
+                                        <td>{{ $peserta->jam_belajar }}</td>
+                                        <td>{{ $peserta->status }}</td>
+                                    </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div> <!-- /.card-body -->

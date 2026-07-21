@@ -23,7 +23,7 @@
                     <!--begin::Row-->
                     <div class="row">
                         <div class="col-sm-6">
-                            <h3 class="mb-0">Form Surat</h3>
+                            <h3 class="mb-0">Tabel Peserta</h3>
                         </div>
 
                     </div>
@@ -35,33 +35,42 @@
             <!--begin::App Content-->
             <div class="app-content">
                 <!--begin::Container-->
-                <div class="card card-primary card-outline mb-4"> <!--begin::Header-->
+                <div class="card mb-4">
                     <div class="card-header">
-                        <div class="card-title">Quick Example</div>
-                    </div> <!--end::Header--> <!--begin::Form-->
-                    <form> <!--begin::Body-->
-                        <div class="card-body">
-                            <div class="mb-3"> <label for="exampleInputEmail1" class="form-label">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1"
-                                    aria-describedby="emailHelp">
-                                <div id="emailHelp" class="form-text">
-                                    We'll never share your email with anyone else.
-                                </div>
-                            </div>
-                            <div class="mb-3"> <label for="exampleInputPassword1" class="form-label">Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1">
-                            </div>
-                            <div class="input-group mb-3"> <input type="file" class="form-control"
-                                    id="inputGroupFile02"> <label class="input-group-text"
-                                    for="inputGroupFile02">Upload</label> </div>
-                            <div class="mb-3 form-check"> <input type="checkbox" class="form-check-input"
-                                    id="exampleCheck1"> <label class="form-check-label" for="exampleCheck1">Check me
-                                    out</label> </div>
-                        </div> <!--end::Body--> <!--begin::Footer-->
-                        <div class="card-footer"> <button type="submit" class="btn btn-primary">Submit</button> </div>
-                        <!--end::Footer-->
-                    </form> <!--end::Form-->
-                </div> <!--end::Quick Example--> <!--begin::Input Group-->
+                        <h3 class="card-title">Bordered Table</h3>
+                    </div> <!-- /.card-header -->
+                    <div class="card-body">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nama Surat</th>
+                                    <th>Nomor Surat</th>
+                                    <th>Juz</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($surat as $surat)
+                                    <tr>
+                                        <td>{{ $surat->id }}</td>
+                                        <td>{{ $surat->nama_surat }}</td>
+                                        <td>{{ $surat->no_surat }}</td>
+                                        <td>{{ $surat->juz }}</td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div> <!-- /.card-body -->
+                    <div class="card-footer clearfix">
+                        <ul class="pagination pagination-sm m-0 float-end">
+                            <li class="page-item"> <a class="page-link" href="#">&laquo;</a> </li>
+                            <li class="page-item"> <a class="page-link" href="#">1</a> </li>
+                            <li class="page-item"> <a class="page-link" href="#">2</a> </li>
+                            <li class="page-item"> <a class="page-link" href="#">3</a> </li>
+                            <li class="page-item"> <a class="page-link" href="#">&raquo;</a> </li>
+                        </ul>
+                    </div>
+                </div> <!-- /.card -->
                 <!--end::Container-->
             </div>
             <!--end::App Content-->
