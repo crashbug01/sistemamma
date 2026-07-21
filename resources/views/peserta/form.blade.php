@@ -37,31 +37,31 @@
                 <!--begin::Container-->
                 <div class="card card-primary card-outline mb-4"> <!--begin::Header-->
                     <div class="card-header">
-                        <div class="card-title">Tambah Peserta</div>
+                        <div class="card-title">Form Peserta</div>
                     </div> <!--end::Header--> <!--begin::Form-->
                     <form method="POST" action="{{ route('peserta.store') }}"> <!--begin::Body-->
                         <div class="card-body">
                             @csrf
                             <div class="mb-3"> <label for="nama" class="form-label">Nama</label>
-                                <input type="text" class="form-control" id="nama">
+                                <input type="text" class="form-control" id="nama" name="nama">
                             </div>
                             <div class="mb-3"> <label for="jenis_kelamin" class="form-label">Jenis Kelamin</label>
-                                <select class="form-select" id="jenis_kelamin" required>
+                                <select class="form-select" id="jenis_kelamin" name="jenis_kelamin" required>
                                     <option selected value="laki-laki">Laki-Laki</option>
                                     <option value="perempuan">Perempuan</option>
                                 </select>
                             </div>
                             <div class="mb-3"> <label for="no_whatsapp" class="form-label">No. Whatsapp</label>
-                                <input type="text" class="form-control" id="no_whatsapp">
+                                <input type="text" class="form-control" id="no_whatsapp" name="no_whatsapp">
                             </div>
                             <div class="mb-3"> <label for="surat_id" class="form-label">ID Surat</label>
-                                <input type="number" class="form-control" id="surat_id">
+                                <input type="number" class="form-control" id="surat_id" name="surat_id">
                             </div>
                             <div class="mb-3"> <label for="jam_belajar" class="form-label">Jam Belajar</label>
-                                <input type="text" class="form-control" id="jam_belajar">
+                                <input type="text" class="form-control" id="jam_belajar" name="jam_belajar">
                             </div>
                             <div class="mb-3"> <label for="status" class="form-label">Status</label>
-                                <select class="form-select" id="status" required>
+                                <select class="form-select" id="status" name="status" required>
                                     <option selected value="aktif">aktif</option>
                                     <option value="tidak_aktif">tidak_aktif</option>
                                 </select>

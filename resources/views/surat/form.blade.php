@@ -23,7 +23,7 @@
                     <!--begin::Row-->
                     <div class="row">
                         <div class="col-sm-6">
-                            <h3 class="mb-0">Form Peserta</h3>
+                            <h3 class="mb-0">Form Surat</h3>
                         </div>
 
                     </div>
@@ -37,19 +37,19 @@
                 <!--begin::Container-->
                 <div class="card card-primary card-outline mb-4"> <!--begin::Header-->
                     <div class="card-header">
-                        <div class="card-title">Quick Example</div>
+                        <div class="card-title">Form Surat</div>
                     </div> <!--end::Header--> <!--begin::Form-->
                     <form method="POST" action="{{ route('surat.store') }}"> <!--begin::Body-->
                         <div class="card-body">
                             @csrf
                             <div class="mb-3"> <label for="nama_surat" class="form-label">Nama Surat</label>
-                                <input type="text" class="form-control" id="nama_surat">
+                                <input type="text" class="form-control" id="nama_surat" name="nama_surat">
                             </div>
                             <div class="mb-3"> <label for="no_surat" class="form-label">Nomor Surat</label>
-                                <input type="number" class="form-control" id="no_surat">
+                                <input type="number" class="form-control" id="no_surat" name="no_surat">
                             </div>
                             <div class="mb-3"> <label for="juz" class="form-label">juz</label>
-                                <input type="number" class="form-control" id="juz">
+                                <input type="number" class="form-control" id="juz" name="juz">
                             </div>
                         </div> <!--end::Body--> <!--begin::Footer-->
                         <div class="card-footer"> <button type="submit" class="btn btn-primary">Submit</button> </div>
