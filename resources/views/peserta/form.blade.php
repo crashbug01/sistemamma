@@ -23,7 +23,7 @@
                     <!--begin::Row-->
                     <div class="row">
                         <div class="col-sm-6">
-                            <h3 class="mb-0">Form Surat</h3>
+                            <h3 class="mb-0">Form Peserta</h3>
                         </div>
 
                     </div>
@@ -37,26 +37,35 @@
                 <!--begin::Container-->
                 <div class="card card-primary card-outline mb-4"> <!--begin::Header-->
                     <div class="card-header">
-                        <div class="card-title">Quick Example</div>
+                        <div class="card-title">Tambah Peserta</div>
                     </div> <!--end::Header--> <!--begin::Form-->
-                    <form> <!--begin::Body-->
+                    <form method="POST" action="{{ route('peserta.store') }}"> <!--begin::Body-->
                         <div class="card-body">
-                            <div class="mb-3"> <label for="exampleInputEmail1" class="form-label">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1"
-                                    aria-describedby="emailHelp">
-                                <div id="emailHelp" class="form-text">
-                                    We'll never share your email with anyone else.
-                                </div>
+                            @csrf
+                            <div class="mb-3"> <label for="nama" class="form-label">Nama</label>
+                                <input type="text" class="form-control" id="nama">
                             </div>
-                            <div class="mb-3"> <label for="exampleInputPassword1" class="form-label">Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1">
+                            <div class="mb-3"> <label for="jenis_kelamin" class="form-label">Jenis Kelamin</label>
+                                <select class="form-select" id="jenis_kelamin" required>
+                                    <option selected value="laki-laki">Laki-Laki</option>
+                                    <option value="perempuan">Perempuan</option>
+                                </select>
                             </div>
-                            <div class="input-group mb-3"> <input type="file" class="form-control"
-                                    id="inputGroupFile02"> <label class="input-group-text"
-                                    for="inputGroupFile02">Upload</label> </div>
-                            <div class="mb-3 form-check"> <input type="checkbox" class="form-check-input"
-                                    id="exampleCheck1"> <label class="form-check-label" for="exampleCheck1">Check me
-                                    out</label> </div>
+                            <div class="mb-3"> <label for="no_whatsapp" class="form-label">No. Whatsapp</label>
+                                <input type="text" class="form-control" id="no_whatsapp">
+                            </div>
+                            <div class="mb-3"> <label for="surat_id" class="form-label">ID Surat</label>
+                                <input type="number" class="form-control" id="surat_id">
+                            </div>
+                            <div class="mb-3"> <label for="jam_belajar" class="form-label">Jam Belajar</label>
+                                <input type="text" class="form-control" id="jam_belajar">
+                            </div>
+                            <div class="mb-3"> <label for="status" class="form-label">Status</label>
+                                <select class="form-select" id="status" required>
+                                    <option selected value="aktif">aktif</option>
+                                    <option value="tidak_aktif">tidak_aktif</option>
+                                </select>
+                            </div>
                         </div> <!--end::Body--> <!--begin::Footer-->
                         <div class="card-footer"> <button type="submit" class="btn btn-primary">Submit</button> </div>
                         <!--end::Footer-->
