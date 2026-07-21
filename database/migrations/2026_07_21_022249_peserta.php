@@ -15,7 +15,7 @@ return new class extends Migration {
             $table->string('nama');
             $table->enum('jenis_kelamin', ['laki-laki', 'perempuan']);
             $table->string('no_whatsapp');
-            $table->foreignId('surat_id');
+            $table->foreign('surat_id')->references('id')->on('surat');
             $table->string('jam_belajar');
             $table->enum('status', ['aktif', 'tidak_aktif']);
             $table->timestamps();

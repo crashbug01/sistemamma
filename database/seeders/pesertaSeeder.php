@@ -30,5 +30,14 @@ class pesertaSeeder extends Seeder
             'jam_belajar' => '09.00-10.00',
             'status' => 'aktif',
         ]);
+
+        peserta::create([
+            'nama' => 'Muhammad Rizky',
+            'jenis_kelamin' => 'laki-laki',
+            'no_whatsapp' => '6281200000003',
+            'surat_id' => '1',
+            'jam_belajar' => '09.00-10.00',
+            'status' => 'aktif',
+        ]);
     }
 }
