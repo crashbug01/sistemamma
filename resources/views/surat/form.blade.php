@@ -43,13 +43,13 @@
                         <div class="card-body">
                             @csrf
                             <div class="mb-3"> <label for="nama_surat" class="form-label">Nama Surat</label>
-                                <input type="text" class="form-control" id="nama_surat" name="nama_surat">
+                                <input type="text" class="form-control" id="nama_surat" name="nama_surat" required>
                             </div>
                             <div class="mb-3"> <label for="no_surat" class="form-label">Nomor Surat</label>
-                                <input type="number" class="form-control" id="no_surat" name="no_surat">
+                                <input type="number" class="form-control" id="no_surat" name="no_surat" required>
                             </div>
                             <div class="mb-3"> <label for="juz" class="form-label">juz</label>
-                                <input type="number" class="form-control" id="juz" name="juz">
+                                <input type="number" class="form-control" id="juz" name="juz" required>
                             </div>
                         </div> <!--end::Body--> <!--begin::Footer-->
                         <div class="card-footer"> <button type="submit" class="btn btn-primary">Submit</button> </div>

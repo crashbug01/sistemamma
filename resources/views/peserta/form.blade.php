@@ -43,7 +43,7 @@
                         <div class="card-body">
                             @csrf
                             <div class="mb-3"> <label for="nama" class="form-label">Nama</label>
-                                <input type="text" class="form-control" id="nama" name="nama">
+                                <input type="text" class="form-control" id="nama" name="nama" required>
                             </div>
                             <div class="mb-3"> <label for="jenis_kelamin" class="form-label">Jenis Kelamin</label>
                                 <select class="form-select" id="jenis_kelamin" name="jenis_kelamin" required>
@@ -52,13 +52,13 @@
                                 </select>
                             </div>
                             <div class="mb-3"> <label for="no_whatsapp" class="form-label">No. Whatsapp</label>
-                                <input type="text" class="form-control" id="no_whatsapp" name="no_whatsapp">
+                                <input type="text" class="form-control" id="no_whatsapp" name="no_whatsapp" required>
                             </div>
                             <div class="mb-3"> <label for="surat_id" class="form-label">ID Surat</label>
-                                <input type="number" class="form-control" id="surat_id" name="surat_id">
+                                <input type="number" class="form-control" id="surat_id" name="surat_id" required>
                             </div>
                             <div class="mb-3"> <label for="jam_belajar" class="form-label">Jam Belajar</label>
-                                <input type="text" class="form-control" id="jam_belajar" name="jam_belajar">
+                                <input type="text" class="form-control" id="jam_belajar" name="jam_belajar" required>
                             </div>
                             <div class="mb-3"> <label for="status" class="form-label">Status</label>
                                 <select class="form-select" id="status" name="status" required>
